@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4774608261746548}
   - component: {fileID: 33268908668290218}
   - component: {fileID: 23573653842712478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,8 +38,8 @@ GameObject:
   - component: {fileID: 4356750445763286}
   - component: {fileID: 61082232151618458}
   - component: {fileID: 50675307790717572}
-  m_Layer: 0
-  m_Name: bread-plain
+  m_Layer: 8
+  m_Name: bread
   m_TagString: Bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963895890802806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.52, y: 0.5, z: 0.010624953}
+  m_LocalPosition: {x: 2.97, y: 0.59, z: 0.010624953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774608261746548}
