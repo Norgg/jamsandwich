@@ -33,7 +33,6 @@ public class PlayerMovement: MonoBehaviour {
     {
         state = new WalkingState(this);
 		carry = GetComponent<Carry>();
-		Debug.Log(carry);
     }
 
     public void ChangeState(CaterpillarState newState)
@@ -53,7 +52,6 @@ public class PlayerMovement: MonoBehaviour {
         {
             jumpPressed = true;
         }
-		Debug.Log(Input.GetAxisRaw("Fire" + playerNum));
 		if (Input.GetAxis("Fire" + playerNum) > 0) {
 			float x = Input.GetAxis("AimX" + playerNum);
 			float y = Input.GetAxis("AimY" + playerNum);

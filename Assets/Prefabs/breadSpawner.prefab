@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4883457688187862}
   - component: {fileID: 114173283194070394}
+  - component: {fileID: 61191445101457736}
   m_Layer: 0
   m_Name: breadSpawner
   m_TagString: Untagged
@@ -34,12 +35,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1945121797703316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.28, y: 4.45, z: 0.060546875}
+  m_LocalPosition: {x: -2.27, y: 4.45, z: 0.060546875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61191445101457736
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1945121797703316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -2.1264749, y: -3.7679682}
+  serializedVersion: 2
+  m_Size: {x: 8.312089, y: 9.282064}
 --- !u!114 &114173283194070394
 MonoBehaviour:
   m_ObjectHideFlags: 1
