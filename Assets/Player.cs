@@ -17,16 +17,20 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		Vector2 vel = rb.velocity;
-		if (Input.GetKey(KeyCode.A)) {
-			vel.x = -4;
-		}
-		if (Input.GetKey(KeyCode.D)) {
-			vel.x = 4;
-		}
-		rb.velocity = vel;
 
-		if (Input.GetKey(KeyCode.W)) {
-			Jump();
+		if (playerNum == 1) {
+			if (Input.GetKey(KeyCode.A)) {
+				vel.x = -4;
+			}
+			if (Input.GetKey(KeyCode.D)) {
+				vel.x = 4;
+			}
+			rb.velocity = vel;
+
+			if (Input.GetKey(KeyCode.W)) {
+				Jump();
+			}
+		} else {
 		}
 
 		if (jumpTimer > 0) {
@@ -36,7 +40,7 @@ public class Player : MonoBehaviour {
 
 	void Jump() {
 		if (jumpTimer == 0) {
-			rb.velocity += new Vector2(0, 10);
+			rb.velocity += new Vector2(0, 5);
 			jumpTimer = 60;
 		}
 	}
