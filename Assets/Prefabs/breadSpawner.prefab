@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4883457688187862}
   - component: {fileID: 114173283194070394}
   m_Layer: 0
-  m_Name: breadSpawner1
+  m_Name: breadSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

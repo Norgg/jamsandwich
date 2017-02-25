@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 61090809908363696}
   - component: {fileID: 50667740921571426}
   - component: {fileID: 114129523307497914}
+  - component: {fileID: 114081459233476260}
   m_Layer: 8
   m_Name: sandwich
   m_TagString: Untagged
@@ -214,6 +215,17 @@ BoxCollider2D:
   m_Offset: {x: -0.06, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.84, y: 1.33}
+--- !u!114 &114081459233476260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960278335345404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca65982661406a489abb0ae0c864707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114129523307497914
 MonoBehaviour:
   m_ObjectHideFlags: 1

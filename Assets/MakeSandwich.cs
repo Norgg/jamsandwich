@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sandwich : MonoBehaviour {
+public class MakeSandwich : MonoBehaviour {
 	public GameObject sandwichFab;
 	bool collidedAlready = false;
 
@@ -25,7 +25,7 @@ public class Sandwich : MonoBehaviour {
 				GameObject.Instantiate(sandwichFab, transform.position, Quaternion.identity);
 				GameObject.Destroy(gameObject);
 				GameObject.Destroy(collision.gameObject);
-				collision.gameObject.GetComponent<Sandwich>().SetCollided();
+				collision.gameObject.GetComponent<MakeSandwich>().SetCollided();
 			}
 		}
 	}

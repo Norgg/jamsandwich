@@ -38,8 +38,9 @@ GameObject:
   - component: {fileID: 4356750445763286}
   - component: {fileID: 61082232151618458}
   - component: {fileID: 50675307790717572}
-  - component: {fileID: 114479764174528676}
   - component: {fileID: 114821881630681618}
+  - component: {fileID: 114438636600731892}
+  - component: {fileID: 114661508843210234}
   m_Layer: 8
   m_Name: bread
   m_TagString: Bread
@@ -146,7 +147,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &114479764174528676
+--- !u!114 &114438636600731892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -154,11 +155,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963895890802806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cabff974f8edb64d8913e021f8336ff, type: 3}
+  m_Script: {fileID: 11500000, guid: dc1622d60eaeea246bee64208c816fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sandwichFab: {fileID: 1960278335345404, guid: 8fef9fe718cfc964e89ca1f95d5bfd53,
     type: 2}
+--- !u!114 &114661508843210234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963895890802806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca65982661406a489abb0ae0c864707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114821881630681618
 MonoBehaviour:
   m_ObjectHideFlags: 1
