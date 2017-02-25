@@ -6,6 +6,7 @@ public class Carry : MonoBehaviour {
 	GameObject holding = null;
 	Rigidbody2D holdingRB = null;
 	Rigidbody2D rb;
+	public float throwPower = 100;
 	public Vector2 holdingOffset = new Vector2(0, 1);
 
 	// Use this for initialization

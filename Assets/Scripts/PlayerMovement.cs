@@ -55,7 +55,7 @@ public class PlayerMovement: MonoBehaviour {
         }
 		if (Input.GetButton("Fire" + playerNum)) {
 			Debug.Log(carry);
-			carry.Throw(new Vector2(100, 100));
+			carry.Throw(new Vector2(100, 500));
 		}
     }
 

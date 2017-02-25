@@ -8,10 +8,12 @@ public class WalkingState : CaterpillarState
 {
     private PlayerMovement caterpillar;
     private float onGroundTimer = 0;
+	private Vector2 startScale;
 
     public WalkingState(PlayerMovement caterpillar)
     {
         this.caterpillar = caterpillar;
+		startScale = caterpillar.transform.localScale;
     }
     
     public void FixedUpdate()
@@ -20,11 +22,11 @@ public class WalkingState : CaterpillarState
         caterpillar.ax = caterpillar.speed * Input.GetAxisRaw(axis);
 		if (Input.GetAxisRaw(axis) > 0)
         {
-            caterpillar.transform.localScale = new Vector2(1, 1);
+			caterpillar.transform.localScale = new Vector2(startScale.x, startScale.y);
         }
 		else if (Input.GetAxisRaw(axis) < 0)
         {
-            caterpillar.transform.localScale = new Vector2(-1, 1);
+			caterpillar.transform.localScale = new Vector2(-startScale.x, startScale.y);
         }
 
         caterpillar.vx += caterpillar.ax * Time.deltaTime;
