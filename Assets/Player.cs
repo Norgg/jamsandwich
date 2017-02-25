@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	public int playerNum = 0;
+	public float speed = 4;
+	public float jumpSpeed = 8;
 
 	Rigidbody2D rb;
 
@@ -18,19 +20,10 @@ public class Player : MonoBehaviour {
 	void Update() {
 		Vector2 vel = rb.velocity;
 
-		if (playerNum == 1) {
-			if (Input.GetKey(KeyCode.A)) {
-				vel.x = -4;
-			}
-			if (Input.GetKey(KeyCode.D)) {
-				vel.x = 4;
-			}
-			rb.velocity = vel;
-
-			if (Input.GetKey(KeyCode.W)) {
-				Jump();
-			}
-		} else {
+		vel.x = Input.GetAxis("Horizontal" + playerNum) * speed;
+		rb.velocity = vel;
+		if (Input.GetButton("Jump" + playerNum)) {
+			Jump();
 		}
 
 		if (jumpTimer > 0) {
@@ -39,8 +32,8 @@ public class Player : MonoBehaviour {
 	}
 
 	void Jump() {
-		if (jumpTimer == 0) {
-			rb.velocity += new Vector2(0, 5);
+		if (jumpTimer <= 0) {
+			rb.velocity += new Vector2(0, jumpSpeed);
 			jumpTimer = 60;
 		}
 	}
