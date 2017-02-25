@@ -27,9 +27,13 @@ public class PlayerMovement: MonoBehaviour {
 
 	public int playerNum = 0;
 
+	private Carry carry = null;
+
     void Start()
     {
         state = new WalkingState(this);
+		carry = GetComponent<Carry>();
+		Debug.Log(carry);
     }
 
     public void ChangeState(CaterpillarState newState)
@@ -49,6 +53,10 @@ public class PlayerMovement: MonoBehaviour {
         {
             jumpPressed = true;
         }
+		if (Input.GetButton("Fire" + playerNum)) {
+			Debug.Log(carry);
+			carry.Throw(new Vector2(100, 100));
+		}
     }
 
     public RaycastHit2D CastAndDrawRay(Vector2 position, Vector2 direction, float length, LayerMask mask)

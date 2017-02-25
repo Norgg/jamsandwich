@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 	int jumpTimer = 0;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		carry = GetComponent<Carry>();
 	}
