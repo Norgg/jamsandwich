@@ -21,17 +21,9 @@ public class Player : MonoBehaviour {
 		Vector2 vel = rb.velocity;
 
 		if (playerNum == 1) {
-			vel.x = Input.GetAxis("Horizontal1") * speed;
+			vel.x = Input.GetAxis("Horizontal" + playerNum) * speed;
 			rb.velocity = vel;
-			Debug.Log(jumpTimer);
-			if (Input.GetAxis("Jump1") > 0) {
-				Jump();
-			}
-		} else {
-			vel.x = Input.GetAxis("Horizontal2") * speed;
-			rb.velocity = vel;
-			Debug.Log(jumpTimer);
-			if (Input.GetAxis("Jump2") > 0) {
+			if (Input.GetButton("Jump" + playerNum)) {
 				Jump();
 			}
 		}
@@ -43,7 +35,6 @@ public class Player : MonoBehaviour {
 
 	void Jump() {
 		if (jumpTimer <= 0) {
-			Debug.Log("Jump!");
 			rb.velocity += new Vector2(0, jumpSpeed);
 			jumpTimer = 60;
 		}
