@@ -13,7 +13,6 @@ public class ShowAim : MonoBehaviour {
 
 	public void SetAim(float x, float y) {
 		float angle = Mathf.Rad2Deg * Mathf.Atan2(x, y);
-		Debug.Log(angle);
 		aimer.rotation = Quaternion.Euler(0, 0, 180+angle);
 		float scale = new Vector2(x, y).magnitude;
 		aimer.localScale = new Vector3(scale, scale, 1);
