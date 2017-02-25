@@ -7,16 +7,11 @@ using UnityEngine;
 public class JumpingState : CaterpillarState
 {
     PlayerMovement caterpillar;
-    Animator animator;
     private float jumpTimer;
 
     public JumpingState(PlayerMovement caterpillar)
     {
         this.caterpillar = caterpillar;
-        animator = this.caterpillar.GetComponent<Animator>();
-        animator.SetBool("Sticking", false);
-        animator.SetBool("Walking", false);
-        animator.SetBool("Jumping", true);
         this.jumpTimer = caterpillar.jumpTime;
     }
 
