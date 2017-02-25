@@ -8,12 +8,14 @@ public class Player : MonoBehaviour {
 	public float jumpSpeed = 8;
 
 	Rigidbody2D rb;
+	Carry carry;
 
 	int jumpTimer = 0;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
+		carry = GetComponent<Carry>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +26,9 @@ public class Player : MonoBehaviour {
 		rb.velocity = vel;
 		if (Input.GetButton("Jump" + playerNum)) {
 			Jump();
+		}
+		if (Input.GetButton("Fire" + playerNum)) {
+			carry.Throw(new Vector2(100, 100));
 		}
 
 		if (jumpTimer > 0) {

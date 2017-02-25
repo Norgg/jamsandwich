@@ -20,6 +20,15 @@ public class Carry : MonoBehaviour {
 		}
 	}
 
+	public void Throw(Vector2 force) {
+		if (holding) {
+			holding.layer = LayerMask.NameToLayer("Default");
+			holdingRB.isKinematic = false;
+			holdingRB.AddForce(force);
+			holding = null;
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("Bread")) {
 			holding = collision.gameObject;
