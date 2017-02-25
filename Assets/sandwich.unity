@@ -130,30 +130,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4356750445763286, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774608261746548, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774608261746548, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774608261746548, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774608261746548, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4774608261746548, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b5855b7aa63a0e41bed8641c4c38c0b, type: 2}
   m_IsPrefabParent: 0
@@ -691,6 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNum: 1
   speed: 4
+  jumpSpeed: 8
 --- !u!1 &1773497159
 GameObject:
   m_ObjectHideFlags: 0
