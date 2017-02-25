@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 61082232151618458}
   - component: {fileID: 50675307790717572}
   - component: {fileID: 114479764174528676}
+  - component: {fileID: 114821881630681618}
   m_Layer: 8
   m_Name: bread
   m_TagString: Bread
@@ -158,3 +159,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandwichFab: {fileID: 1960278335345404, guid: 8fef9fe718cfc964e89ca1f95d5bfd53,
     type: 2}
+--- !u!114 &114821881630681618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963895890802806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b022c7310abe85438490f88a4d3b2de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

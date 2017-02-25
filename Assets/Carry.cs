@@ -22,15 +22,15 @@ public class Carry : MonoBehaviour {
 	}
 
 	public void Throw(Vector2 direction) {
-		if (holding) {
+		if (holding != null) {
 			holdingRB.isKinematic = false;
-			holdingRB.AddForce(direction * throwPower);
+			holdingRB.velocity = direction * throwPower;
 			holding = null;
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		if (holding == null && collision.gameObject.CompareTag("Bread")) {
+		if (holding == null && collision.gameObject.GetComponent<Carriable>() != null) {
 			holding = collision.gameObject;
 			holdingRB = holding.GetComponent<Rigidbody2D>();
 			holdingRB.isKinematic = true;
