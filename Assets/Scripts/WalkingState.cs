@@ -16,12 +16,13 @@ public class WalkingState : CaterpillarState
     
     public void FixedUpdate()
     {
-        caterpillar.ax = caterpillar.speed * Input.GetAxisRaw("Horizontal");
-        if (Input.GetAxisRaw("Horizontal") > 0)
+		String axis = "Horizontal" + caterpillar.playerNum;
+        caterpillar.ax = caterpillar.speed * Input.GetAxisRaw(axis);
+		if (Input.GetAxisRaw(axis) > 0)
         {
             caterpillar.transform.localScale = new Vector2(1, 1);
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0)
+		else if (Input.GetAxisRaw(axis) < 0)
         {
             caterpillar.transform.localScale = new Vector2(-1, 1);
         }

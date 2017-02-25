@@ -22,7 +22,8 @@ public class JumpingState : CaterpillarState
 
     public void FixedUpdate()
     {
-        caterpillar.ax = caterpillar.speed * Input.GetAxisRaw("Horizontal");
+		String axis = "Horizontal" + caterpillar.playerNum;
+		caterpillar.ax = caterpillar.speed * Input.GetAxisRaw(axis);
 
         caterpillar.vx += caterpillar.ax * Time.fixedDeltaTime;
         caterpillar.vx *= caterpillar.friction;
@@ -32,7 +33,7 @@ public class JumpingState : CaterpillarState
         Debug.Log("Time left: " + jumpTimer);
         jumpTimer -= Time.fixedDeltaTime;
 
-        if (jumpTimer <= 0 || !Input.GetButton("Jump"))
+		if (jumpTimer <= 0 || !Input.GetButton(axis))
         {
             caterpillar.ChangeState(new WalkingState(caterpillar));
             return;

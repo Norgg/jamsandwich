@@ -25,6 +25,8 @@ public class PlayerMovement: MonoBehaviour {
     public float onGroundLeeway = 0.5f;
     private CaterpillarState state;
 
+	public int playerNum = 0;
+
     void Start()
     {
         state = new WalkingState(this);
@@ -43,7 +45,7 @@ public class PlayerMovement: MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump" + playerNum))
         {
             jumpPressed = true;
         }

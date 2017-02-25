@@ -150,7 +150,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: AimY1
+    m_Name: AimX1
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -166,7 +166,7 @@ InputManager:
     axis: 0
     joyNum: 2
   - serializedVersion: 3
-    m_Name: Jump2
+    m_Name: AimX2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
