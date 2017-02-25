@@ -36,7 +36,6 @@ public class Player : MonoBehaviour {
 			}
 		}
 
-
 		if (jumpTimer > 0) {
 			jumpTimer--;
 		}
