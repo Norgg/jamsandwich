@@ -20,15 +20,6 @@ public class WalkingState : CaterpillarState
     {
 		String axis = "Horizontal" + caterpillar.playerNum;
         caterpillar.ax = caterpillar.speed * Input.GetAxisRaw(axis);
-		if (Input.GetAxisRaw(axis) > 0)
-        {
-			caterpillar.transform.localScale = new Vector2(startScale.x, startScale.y);
-        }
-		else if (Input.GetAxisRaw(axis) < 0)
-        {
-			caterpillar.transform.localScale = new Vector2(-startScale.x, startScale.y);
-        }
-
         caterpillar.vx += caterpillar.ax * Time.deltaTime;
         caterpillar.vx *= caterpillar.friction;
 

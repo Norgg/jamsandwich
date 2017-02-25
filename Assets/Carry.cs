@@ -25,6 +25,7 @@ public class Carry : MonoBehaviour {
 		if (holding != null) {
 			holdingRB.isKinematic = false;
 			holdingRB.velocity = direction * throwPower;
+			holdingRB.angularVelocity = (0.5f - Random.value) * 1000;
 			holding = null;
 		}
 	}

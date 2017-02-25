@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnBread : MonoBehaviour {
 	public GameObject breadFab;
 	HashSet<GameObject> currentBreads = new HashSet<GameObject>();
+	int spawnTime = 60;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,12 @@ public class SpawnBread : MonoBehaviour {
 		currentBreads.RemoveWhere(bread => bread == null);
 
 		if (currentBreads.Count == 0) {
-			currentBreads.Add(GameObject.Instantiate(breadFab, transform.position, Quaternion.identity));
+			if (spawnTime > 0) {
+				spawnTime--;
+			} else {
+				currentBreads.Add(GameObject.Instantiate(breadFab, transform.position, Quaternion.identity));
+				spawnTime = 60;
+			}
 		}
 	}
 
