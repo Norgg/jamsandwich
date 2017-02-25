@@ -20,12 +20,10 @@ public class Player : MonoBehaviour {
 	void Update() {
 		Vector2 vel = rb.velocity;
 
-		if (playerNum == 1) {
-			vel.x = Input.GetAxis("Horizontal" + playerNum) * speed;
-			rb.velocity = vel;
-			if (Input.GetButton("Jump" + playerNum)) {
-				Jump();
-			}
+		vel.x = Input.GetAxis("Horizontal" + playerNum) * speed;
+		rb.velocity = vel;
+		if (Input.GetButton("Jump" + playerNum)) {
+			Jump();
 		}
 
 		if (jumpTimer > 0) {
