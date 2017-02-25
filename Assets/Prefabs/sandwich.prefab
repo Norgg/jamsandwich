@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4916874102694480}
   - component: {fileID: 33487889622688502}
   - component: {fileID: 23226322276581248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: slice1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 50667740921571426}
   m_Layer: 8
   m_Name: sandwich
-  m_TagString: Bread
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

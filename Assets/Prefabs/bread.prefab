@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4356750445763286}
   - component: {fileID: 61082232151618458}
   - component: {fileID: 50675307790717572}
+  - component: {fileID: 114479764174528676}
   m_Layer: 8
   m_Name: bread
   m_TagString: Bread
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963895890802806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.97, y: 0.59, z: 0.010624953}
+  m_LocalPosition: {x: -2.52, y: 0.5, z: 0.010624953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774608261746548}
@@ -144,3 +145,16 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114479764174528676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963895890802806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cabff974f8edb64d8913e021f8336ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sandwichFab: {fileID: 1960278335345404, guid: 8fef9fe718cfc964e89ca1f95d5bfd53,
+    type: 2}
