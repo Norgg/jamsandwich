@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Carry : MonoBehaviour {
 	GameObject holding = null;
+	Rigidbody2D holdingRB = null;
 	Rigidbody2D rb;
 	public Vector2 holdingOffset = new Vector2(0, 2);
 
@@ -15,8 +16,6 @@ public class Carry : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate() {
 		if (holding != null) {
-			Rigidbody2D holdingRB = holding.GetComponent<Rigidbody2D>();
-			holdingRB.isKinematic = true;
 			holdingRB.position = rb.position + holdingOffset;
 		}
 	}
@@ -24,6 +23,9 @@ public class Carry : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("Bread")) {
 			holding = collision.gameObject;
+			holding.layer = LayerMask.NameToLayer("Carried");
+			holdingRB = holding.GetComponent<Rigidbody2D>();
+			holdingRB.isKinematic = true;
 		}
 	}
 }

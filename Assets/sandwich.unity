@@ -139,6 +139,10 @@ Prefab:
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1436823229437460, guid: 749f38908d2a60d4faf109dd8e6147ae, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 749f38908d2a60d4faf109dd8e6147ae, type: 2}
   m_IsPrefabParent: 0
@@ -304,7 +308,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 749663138}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 46e6b3dffb42d7e4787d086dd4e3b0e5, type: 2}
+  m_Material: {fileID: 6200000, guid: 80a734f3761b8044c8e0a421beb2be7d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -453,8 +457,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 982575447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26852363, y: -4.48, z: -7.1099405}
-  m_LocalScale: {x: 39.8875, y: 1, z: 1}
+  m_LocalPosition: {x: -0.03, y: -4.48, z: -7.1099405}
+  m_LocalScale: {x: 19.167145, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -485,7 +489,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1381137131}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 46e6b3dffb42d7e4787d086dd4e3b0e5, type: 2}
+  m_Material: {fileID: 6200000, guid: 80a734f3761b8044c8e0a421beb2be7d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -568,7 +572,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1773497159}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 46e6b3dffb42d7e4787d086dd4e3b0e5, type: 2}
+  m_Material: {fileID: 6200000, guid: 80a734f3761b8044c8e0a421beb2be7d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -668,10 +672,9 @@ Prefab:
       propertyPath: m_Name
       value: player1
       objectReference: {fileID: 0}
-    - target: {fileID: 114397544974311744, guid: 749f38908d2a60d4faf109dd8e6147ae,
-        type: 2}
-      propertyPath: holdingOffset.y
-      value: 1
+    - target: {fileID: 1436823229437460, guid: 749f38908d2a60d4faf109dd8e6147ae, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 749f38908d2a60d4faf109dd8e6147ae, type: 2}
