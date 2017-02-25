@@ -6,7 +6,7 @@ public class Carry : MonoBehaviour {
 	GameObject holding = null;
 	Rigidbody2D holdingRB = null;
 	Rigidbody2D rb;
-	public float throwPower = 100;
+	public float throwPower = 300;
 	public Vector2 holdingOffset = new Vector2(0, 1);
 
 	// Use this for initialization
@@ -21,21 +21,20 @@ public class Carry : MonoBehaviour {
 		}
 	}
 
-	public void Throw(Vector2 force) {
+	public void Throw(Vector2 direction) {
 		if (holding) {
-			holding.layer = LayerMask.NameToLayer("Default");
 			holdingRB.isKinematic = false;
-			holdingRB.AddForce(force);
+			holdingRB.AddForce(direction * throwPower);
 			holding = null;
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.gameObject.CompareTag("Bread")) {
+		if (holding == null && collision.gameObject.CompareTag("Bread")) {
 			holding = collision.gameObject;
-			holding.layer = LayerMask.NameToLayer("Carried");
 			holdingRB = holding.GetComponent<Rigidbody2D>();
 			holdingRB.isKinematic = true;
+			holdingRB.angularVelocity = 0;
 		}
 	}
 }

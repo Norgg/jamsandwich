@@ -53,9 +53,13 @@ public class PlayerMovement: MonoBehaviour {
         {
             jumpPressed = true;
         }
-		if (Input.GetButton("Fire" + playerNum)) {
-			Debug.Log(carry);
-			carry.Throw(new Vector2(100, 500));
+		Debug.Log(Input.GetAxisRaw("Fire" + playerNum));
+		if (Input.GetAxis("Fire" + playerNum) > 0) {
+			float x = Input.GetAxis("AimX" + playerNum);
+			float y = Input.GetAxis("AimY" + playerNum);
+			Debug.Log("Throwing " + x + ", " + y);
+
+			carry.Throw(new Vector2(x, -y));
 		}
     }
 
