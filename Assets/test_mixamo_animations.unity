@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.57482487, a: 1}
+  m_IndirectSpecularColor: {r: 0.4508974, g: 0.5007986, b: 0.5745895, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -99,8 +99,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 516344997}
+  - component: {fileID: 516344998}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PlayerRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +121,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &516344998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 516344996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754ba5bfbd99245cab21b8158822a50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612782074
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,13 +188,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612782074}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.054187536, y: -0.95281667, z: 0.29861695, w: -0.0056712013}
+  m_LocalPosition: {x: -0.611, y: 4.025, z: 1.057}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.642002, y: -183.008, z: -7.4480004}
 --- !u!1001 &893762001
 Prefab:
   m_ObjectHideFlags: 0
@@ -192,15 +204,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400050, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.122
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.097
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -228,17 +240,11 @@ Prefab:
       objectReference: {fileID: 9100000, guid: adbf8b176de024be3872ad3a46ace990, type: 2}
     - target: {fileID: 9500000, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some transforms are animated by both a Humanoid animation
-        clip and a Generic animation clip. Only the Humanoid clip will be applied
-        on those transforms.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform 'mixamorig:RightFoot'\n\tTransform
-        'mixamorig:Head'\n\tTransform 'mixamorig:LeftUpLeg'\n\tand more ...\n\tFrom
-        animation clip 'neutral_idle'\n\tFrom animation clip 'ready_idle'\n\tFrom
-        animation clip 'running'\n\tFrom animation clip 'running_backward'\n\tFrom
-        animation clip 'running_inPlace'\n\tFrom animation clip 'goalie_throw'\n\tFrom
-        animation clip 'falling'\n\tFrom animation clip 'fall_a_loop'\n\tFrom animation
-        clip 'carrying'\n\tFrom animation clip 'backwards_rifle_run'\n\tand more ..."
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29714f61cfe964785a5bf3ae076f05ea, type: 3}
@@ -327,8 +333,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1016455562}
-  m_LocalRotation: {x: 0.030308833, y: 0.96861017, z: -0.1961553, w: 0.14966233}
-  m_LocalPosition: {x: -0.6466552, y: 0.589342, z: 1.6213503}
+  m_LocalRotation: {x: 0.07600181, y: 0.9239941, z: -0.26350865, w: 0.2664992}
+  m_LocalPosition: {x: -0.7886238, y: 0.8695593, z: 1.5326638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
