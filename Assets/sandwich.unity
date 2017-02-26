@@ -285,7 +285,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -922,6 +922,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1963895890802806, guid: 5b5855b7aa63a0e41bed8641c4c38c0b,
         type: 2}
+    - target: {fileID: 114173283194070394, guid: c7c197cc3bf2da247b527690a92d014c,
+        type: 2}
+      propertyPath: spawnContinuously
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173283194070394, guid: c7c197cc3bf2da247b527690a92d014c,
+        type: 2}
+      propertyPath: defaultSpawnTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
   m_IsPrefabParent: 0
@@ -1376,6 +1386,16 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 13.90103
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173283194070394, guid: c7c197cc3bf2da247b527690a92d014c,
+        type: 2}
+      propertyPath: spawnContinuously
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114173283194070394, guid: c7c197cc3bf2da247b527690a92d014c,
+        type: 2}
+      propertyPath: defaultSpawnTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
