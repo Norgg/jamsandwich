@@ -21,6 +21,7 @@ public class PlatingArea : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D other) {
 		if (sandwiches.Contains(other.gameObject)) {
 			sandwiches.Remove(other.gameObject);
+            other.gameObject.AddComponent<Carriable>();
 		}
 	}
 }
