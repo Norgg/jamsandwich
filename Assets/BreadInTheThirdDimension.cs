@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BreadInTheThirdDimension : MonoBehaviour {
     private Rigidbody rigidbody;
-    private float lifetime = 60.0f;
+    private float lifetime = 240.0f;
 
     public void MidairImpulse(bool zForward) {
         // Impulse and rotate out of the sky
