@@ -7,7 +7,6 @@ public class PlatingArea : MonoBehaviour {
 
     public void Update()
     {
-        print("Num of Sandwiches on plate: " + sandwiches.Count);
     }
 
     void OnTriggerEnter2D(Collider2D other) {

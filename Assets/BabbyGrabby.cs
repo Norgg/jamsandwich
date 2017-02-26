@@ -9,12 +9,16 @@ public class BabbyGrabby : MonoBehaviour {
     private Vector2 originalPos;
     private Vector2 plateVec;
     public float grabSpeed = 3.0f;
+	public GameObject baby;
+	Hunger babyHunger;
 
     public void Start()
     {
         originalPos = transform.position;
         plateVec = platingArea.gameObject.transform.position;
+		babyHunger = baby.GetComponent<Hunger>();
     }
+
     public void Update()
     {
         // Check for sandwiches
@@ -35,6 +39,7 @@ public class BabbyGrabby : MonoBehaviour {
 
         if(towardsPlateMoveProgress >= 1 && movingTowardsPlate)
         {
+			babyHunger.Eat(platingArea.sandwiches.Count);
             foreach(var sandwich in platingArea.sandwiches)
             {
                 Destroy(sandwich.gameObject);
