@@ -942,6 +942,11 @@ Prefab:
       propertyPath: m_Name
       value: player1
       objectReference: {fileID: 0}
+    - target: {fileID: 114956431175692174, guid: a87ffd56e7e4eba43bce3c3c853142d0,
+        type: 2}
+      propertyPath: holdingOffset.x
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a87ffd56e7e4eba43bce3c3c853142d0, type: 2}
   m_IsPrefabParent: 0
@@ -1102,6 +1107,11 @@ Prefab:
     - target: {fileID: 4923428092686432, guid: a87ffd56e7e4eba43bce3c3c853142d0, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 114956431175692174, guid: a87ffd56e7e4eba43bce3c3c853142d0,
+        type: 2}
+      propertyPath: holdingOffset.x
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a87ffd56e7e4eba43bce3c3c853142d0, type: 2}
