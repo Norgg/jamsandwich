@@ -85,13 +85,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1086757267756434}
-  m_LocalRotation: {x: 0.4055798, y: -0.579228, z: 0.579228, w: 0.4055798}
+  m_LocalRotation: {x: 0.579228, y: 0.4055798, z: -0.4055798, w: 0.579228}
   m_LocalPosition: {x: -0.12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4038750175657028}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 110}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 110}
 --- !u!4 &4916874102694480
 Transform:
   m_ObjectHideFlags: 1
@@ -180,7 +180,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1086757267756434}
-  m_Mesh: {fileID: 4300000, guid: 9f765cfc6bffc4ab089c3221dd6b214d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 90866a1122d614d31a5f2e10c4aaea68, type: 3}
 --- !u!50 &50667740921571426
 Rigidbody2D:
   serializedVersion: 4
