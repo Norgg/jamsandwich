@@ -8,11 +8,13 @@ public class SpawnBread : MonoBehaviour {
 
 	public Vector2 baseDirection = new Vector2(0, 400);
 	public float angleVariation = 15;
-	int spawnTime = 60;
+	public float defaultSpawnTime = 5f;
+	public bool spawnContinuously = true;
+	float spawnTime;
 
 	// Use this for initialization
 	void Start () {
-		
+		spawnTime = 1f;
 	}
 	
 	// Update is called once per frame
@@ -21,22 +23,26 @@ public class SpawnBread : MonoBehaviour {
 
 		if (currentBreads.Count == 0) {
 			if (spawnTime > 0) {
-				spawnTime--;
+				spawnTime -= Time.fixedDeltaTime;
 			} else {
 				GameObject newBread = GameObject.Instantiate(breadFab, transform.position, Quaternion.identity);
 				Rigidbody2D rb = newBread.GetComponent<Rigidbody2D>();
 				Vector2 force = Quaternion.Euler(0, 0, (0.5f - Random.value) * angleVariation) * baseDirection;
 				rb.AddForce(force);
 				rb.AddTorque(Random.Range(-4f, 4f));
-				currentBreads.Add(newBread);
-				spawnTime = 60;
+				if (!spawnContinuously) {
+					currentBreads.Add(newBread);
+				}
+				spawnTime = defaultSpawnTime + Random.Range(0.0f, 1.0f);
 			}
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.CompareTag("Bread")) {
-			currentBreads.Add(other.gameObject);
+		if (!spawnContinuously) {
+			if (other.CompareTag("Bread")) {
+				currentBreads.Add(other.gameObject);
+			}
 		}
 	}
 
