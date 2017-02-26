@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4996504829032298}
   - component: {fileID: 61929419505591008}
   - component: {fileID: 114116875357609674}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlateLandArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,3 +179,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3f872beb6dba140b6ec2d5e57940ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sandwiches: []

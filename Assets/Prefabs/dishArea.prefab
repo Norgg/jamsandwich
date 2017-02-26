@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4247244106736620}
   - component: {fileID: 61212111620323280}
   m_Layer: 2
-  m_Name: dishAreaLeft
+  m_Name: dishArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

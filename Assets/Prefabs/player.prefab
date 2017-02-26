@@ -1144,10 +1144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602690c8c37166c4e96c3207675a48e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holding: {fileID: 0}
-  initialThrowPower: 5
-  throwGrowthSpeed: 15
-  maxThrowPower: 15
+  initialThrowPower: 2
+  throwGrowthSpeed: 11
+  maxThrowPower: 11
   holdingOffset: {x: 0, y: 0.6}
 --- !u!137 &137348904298474538
 SkinnedMeshRenderer:
