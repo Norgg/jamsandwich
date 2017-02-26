@@ -29,11 +29,11 @@ public class MakeSandwich : MonoBehaviour {
 
 			if (!beingCarried && !otherBeingCarried) {
 				if (jam1 != null && jam2 != null && (jam1.HasJam() || jam2.HasJam())) {
-						SuccessSandwich(collision.gameObject);
-					}
+					SuccessSandwich(collision.gameObject);
 				} else {
 					FailSandwich(collision.gameObject);
 				}
+			}
 		}
 	}
 
