@@ -16,7 +16,8 @@ public class FiveSecondRule : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("Ground")) {
-			GameObject.Destroy(gameObject);
+			var bread3D = GetComponent<I_Am_Bread>().BeAllYouCanBe();
+			bread3D.GetComponent<BreadInTheThirdDimension>().GroundImpulse();
 		}
 	}
 }

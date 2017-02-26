@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class I_Am_Bread : MonoBehaviour {
+    public GameObject bread3DPrefab;
 
     void Start () {
         var googlies = GetComponentsInChildren<Googly>();
@@ -13,5 +14,18 @@ public class I_Am_Bread : MonoBehaviour {
                 Destroy(go);
             }
         }
+    }
+
+    public GameObject BeAllYouCanBe() {
+        // Grow into the third dimension!
+        GameObject bread3D = GameObject.Instantiate(bread3DPrefab, transform.position + 0.2f * Vector3.up, transform.rotation);
+        Transform transform3D = bread3D.transform;
+        Rigidbody body3D = bread3D.GetComponent<Rigidbody>();
+        while (transform.childCount > 0) {
+            var child = transform.GetChild(0);
+            child.SetParent(transform3D, false);
+        }
+        Destroy(gameObject);
+        return bread3D;
     }
 }
