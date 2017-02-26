@@ -5,6 +5,9 @@ using UnityEngine;
 public class SpawnBread : MonoBehaviour {
 	public GameObject breadFab;
 	HashSet<GameObject> currentBreads = new HashSet<GameObject>();
+
+	public Vector2 baseDirection = new Vector2(0, 400);
+	public float angleVariation = 15;
 	int spawnTime = 60;
 
 	// Use this for initialization
@@ -20,7 +23,11 @@ public class SpawnBread : MonoBehaviour {
 			if (spawnTime > 0) {
 				spawnTime--;
 			} else {
-				currentBreads.Add(GameObject.Instantiate(breadFab, transform.position, Quaternion.identity));
+				GameObject newBread = GameObject.Instantiate(breadFab, transform.position, Quaternion.identity);
+				Rigidbody2D rb = newBread.GetComponent<Rigidbody2D>();
+				Vector2 force = Quaternion.Euler(0, 0, (0.5f - Random.value) * angleVariation) * baseDirection;
+				rb.AddForce(force);
+				currentBreads.Add(newBread);
 				spawnTime = 60;
 			}
 		}

@@ -28,14 +28,11 @@ public class PlayerMovement: MonoBehaviour {
 	public int playerNum = 0;
 
 	private Carry carry = null;
-    private bool throwing = false;
-    private ItsAliiiiiive itsAliiiiiive;
 
     void Start()
     {
         state = new WalkingState(this);
 		carry = GetComponent<Carry>();
-        itsAliiiiiive = GetComponent<ItsAliiiiiive>();
     }
 
     public void ChangeState(CaterpillarState newState)
@@ -55,22 +52,6 @@ public class PlayerMovement: MonoBehaviour {
         {
             jumpPressed = true;
         }
-/*
-		float x = Input.GetAxis("AimX" + playerNum);
-		float y = Input.GetAxis("AimY" + playerNum);
-		aim.SetAim(x, y);
-		if (Input.GetAxis("Fire" + playerNum) > 0) {
-            if (!throwing && carry.holding != null) {
-                throwing = true;
-                itsAliiiiiive.StartThrow(
-                    // throwing point of animation
-                    () => { carry.Throw(new Vector2(x, -y)); },
-                    // animation finished
-                    () => { throwing = false; }
-                );
-            }
-		}
-		*/
     }
 
     public RaycastHit2D CastAndDrawRay(Vector2 position, Vector2 direction, float length, LayerMask mask)
