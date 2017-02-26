@@ -18,7 +18,7 @@ public class Hunger : MonoBehaviour {
 			hungerBar.transform.localScale = scale;
 			Debug.Log(hunger);
 			if (hunger > maxHunger / 2) {
-				Material mat = hungerBar.GetComponent<MeshRenderer>().sharedMaterial;
+				Material mat = hungerBar.GetComponent<MeshRenderer>().material;
 				mat.color = new Color(1, 0, 0);
 				hungerBar.GetComponent<MeshRenderer>().sharedMaterial = mat;
 			}
@@ -29,6 +29,11 @@ public class Hunger : MonoBehaviour {
 		hunger -= sandwiches * hungerPerSandwich;
 		if (hunger < 0) {
 			hunger = 0;
+		}
+		if (hunger < maxHunger / 2) {
+			Material mat = hungerBar.GetComponent<MeshRenderer>().material;
+			mat.color = new Color(1, 1, 1);
+			hungerBar.GetComponent<MeshRenderer>().sharedMaterial = mat;
 		}
 	}
 }

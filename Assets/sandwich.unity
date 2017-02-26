@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71335fa9a9729d644a439f0b73b60940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSpeed: 0.01
-  hungerPerSandwich: 1
+  hungerSpeed: 0.004
+  hungerPerSandwich: 3
   hungerBar: {fileID: 455209226}
 --- !u!4 &359063064
 Transform:
@@ -360,13 +360,13 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 455209226}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dab870d910d98fe4b9cb2f856460da41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
