@@ -38,7 +38,6 @@ public class Carry : MonoBehaviour {
 	}
 
 	aim.SetAim(currentAimDir, currentThrowPower, maxThrowPower);
-	Debug.Log("Throwing " + currentAimDir);
 
 	if (beginFiring)
 	{
