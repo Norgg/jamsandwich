@@ -25,8 +25,14 @@ public class MakeSandwich : MonoBehaviour {
 		if (collision.gameObject.CompareTag("Bread") && !collidedAlready) {
 			Jammable jam1 = GetComponent<Jammable>();
 			Jammable jam2 = collision.transform.GetComponent<Jammable>();
-			if (jam1 != null && jam2 != null && jam1.HasJam() && jam2.HasJam()) {				
-				SuccessSandwich(collision.gameObject);
+			collision.gameObject.GetComponent<MakeSandwich>().SetCollided();
+
+			if (jam1 != null && jam2 != null && jam1.HasJam() && jam2.HasJam()) {
+				var beingCarried = gameObject.GetComponent<Carriable>().IsBeingCarried();
+				var otherBeingCarried = collision.gameObject.GetComponent<Carriable>().IsBeingCarried();
+				if (!beingCarried && !otherBeingCarried) {
+					SuccessSandwich(collision.gameObject);
+				}
 			} else {
 				FailSandwich(collision.gameObject);
 			}
@@ -34,18 +40,22 @@ public class MakeSandwich : MonoBehaviour {
 	}
 
 	void FailSandwich(GameObject other) {
+		var bread3D = GetComponent<I_Am_Bread>().BeAllYouCanBe();
+		bread3D.GetComponent<BreadInTheThirdDimension>().MidairImpulse(true);
+
+		var otherBread3D = other.GetComponent<I_Am_Bread>().BeAllYouCanBe();
+		otherBread3D.GetComponent<BreadInTheThirdDimension>().MidairImpulse(false);
+
+		other.GetComponent<I_Am_Bread>().BeAllYouCanBe();
 	}
 
 	void SuccessSandwich(GameObject other) {
-		var beingCarried = gameObject.GetComponent<Carriable>().IsBeingCarried();
-		var otherBeingCarried = other.GetComponent<Carriable>().IsBeingCarried();
-		if(!beingCarried && !otherBeingCarried)
-		{
-			var sanFab = GameObject.Instantiate(sandwichFab, transform.position, Quaternion.identity);
-			sanFab.GetComponent<Rigidbody2D>().angularVelocity = 200;
-			GameObject.Destroy(gameObject);
-			GameObject.Destroy(other);
-			gameObject.GetComponent<MakeSandwich>().SetCollided();
+		var sanFab = GameObject.Instantiate(sandwichFab, transform.position, Quaternion.identity);
+		sanFab.GetComponent<Rigidbody2D>().angularVelocity = 200;
+		GameObject.Destroy(gameObject);
+		GameObject.Destroy(other);
+		if (splat != null) {
+			splat.Play();
 		}
 	}
 }
