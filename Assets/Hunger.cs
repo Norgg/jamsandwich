@@ -25,6 +25,10 @@ public class Hunger : MonoBehaviour {
 		}
 	}
 
+	public bool EatPlayers() {
+		return hunger >= maxHunger;
+	}
+
 	public void Eat(int sandwiches) {
 		hunger -= sandwiches * hungerPerSandwich;
 		if (hunger < 0) {

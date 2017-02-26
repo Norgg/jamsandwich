@@ -332,6 +332,26 @@ Prefab:
       propertyPath: m_Name
       value: Jamjar1
       objectReference: {fileID: 0}
+    - target: {fileID: 4940743581386726, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940743581386726, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.40688103
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940743581386726, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9134812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940743581386726, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940743581386726, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -48.018
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bcd9a75aaf243844a752d5a21234f06, type: 2}
   m_IsPrefabParent: 0
@@ -481,6 +501,7 @@ MonoBehaviour:
   platingArea: {fileID: 648183040}
   grabSpeed: 1.5
   baby: {fileID: 359063062}
+  playerToGrab: {fileID: 1693320069}
 --- !u!4 &554109548 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4695334855499096, guid: 1887e6b331cf0404da161f8f442005b4,
@@ -1111,6 +1132,7 @@ MonoBehaviour:
   platingArea: {fileID: 1835430884}
   grabSpeed: 1.5
   baby: {fileID: 359063062}
+  playerToGrab: {fileID: 1888962266}
 --- !u!1001 &1082802304
 Prefab:
   m_ObjectHideFlags: 0
@@ -1406,6 +1428,10 @@ Transform:
   m_Father: {fileID: 787825703}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1693320069 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 175486, guid: a87ffd56e7e4eba43bce3c3c853142d0, type: 2}
+  m_PrefabInternal: {fileID: 1088459527}
 --- !u!1 &1766585413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1626,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1888962266 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 175486, guid: a87ffd56e7e4eba43bce3c3c853142d0, type: 2}
+  m_PrefabInternal: {fileID: 1002596259}
 --- !u!1 &1916832426
 GameObject:
   m_ObjectHideFlags: 0
