@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Carry : MonoBehaviour {
-    [HideInInspector]
-	public GameObject holding = null;
+    private GameObject holding = null;
     Rigidbody2D holdingRB = null;
+    private ItsAliiiiiive itsAliiiiiive;
 
     public float initialThrowPower = 1;
     public float throwGrowthSpeed = 1;
@@ -18,6 +18,7 @@ public class Carry : MonoBehaviour {
     private Vector2 currentAimDir;
     private ShowAim aim = null;
     private bool beginFiring = false;
+    private bool animateFiring = false;
     private float catchDelay = 0.0f;
 
     // Use this for initialization
@@ -25,6 +26,7 @@ public class Carry : MonoBehaviour {
 	playerNum = GetComponent<PlayerMovement>().playerNum;
 	aim = GetComponent<ShowAim>();
 	currentAimDir = new Vector2(0, 1.0f);
+        itsAliiiiiive = GetComponent<ItsAliiiiiive>();
     }
 
     private void Update()
@@ -43,16 +45,24 @@ public class Carry : MonoBehaviour {
 	    currentThrowPower = Mathf.Clamp(currentThrowPower + throwGrowthSpeed * Time.deltaTime, 0, maxThrowPower);
 	}
 
-	if (Input.GetAxis("Fire" + playerNum) > 0 && !beginFiring) {
+	if (Input.GetAxis("Fire" + playerNum) > 0 && !beginFiring && !animateFiring) {
 	    beginFiring = true;
 	    currentThrowPower = initialThrowPower;
 	}
-	else if(Input.GetAxis("Fire" + playerNum) == 0 && beginFiring)
+	else if(Input.GetAxis("Fire" + playerNum) == 0 && beginFiring && !animateFiring)
 	{
-	    beginFiring = false;
-	    Throw(currentAimDir, currentThrowPower);
-	    currentThrowPower = initialThrowPower;
-	}
+            beginFiring = false;
+            animateFiring = true;
+            Vector2 aimDir = currentAimDir;
+            float throwPower = currentThrowPower;
+            itsAliiiiiive.StartThrow(
+                // throwing point of animation
+                () => { Throw(aimDir, throwPower); },
+                // animation finished
+                () => { animateFiring = false; }
+            );
+            currentThrowPower = initialThrowPower;
+        }
     }
     // Update is called once per frame
     void FixedUpdate() {
@@ -86,4 +96,8 @@ public class Carry : MonoBehaviour {
 		holding.transform.rotation = Quaternion.Euler(0, 0, 0);
 	    }
 	}
+
+    public bool IsCarrying() {
+        return (holding != null);
     }
+}

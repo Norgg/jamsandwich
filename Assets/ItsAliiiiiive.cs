@@ -39,7 +39,7 @@ public class ItsAliiiiiive : MonoBehaviour {
 
 	void Update () {
 		animator.SetFloat("speed", flipped ? -playerMovement.vx : playerMovement.vx);
-		animator.SetBool("carrying", (carry.holding != null));
+		animator.SetBool("carrying", carry.IsCarrying());
 	}
 
 	public void StartThrow(AnimationTriggerDelegate throwObject, AnimationTriggerDelegate throwFinished) {
