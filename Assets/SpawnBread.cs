@@ -27,6 +27,7 @@ public class SpawnBread : MonoBehaviour {
 				Rigidbody2D rb = newBread.GetComponent<Rigidbody2D>();
 				Vector2 force = Quaternion.Euler(0, 0, (0.5f - Random.value) * angleVariation) * baseDirection;
 				rb.AddForce(force);
+				rb.AddTorque(Random.Range(-4f, 4f));
 				currentBreads.Add(newBread);
 				spawnTime = 60;
 			}

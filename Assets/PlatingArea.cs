@@ -7,12 +7,11 @@ public class PlatingArea : MonoBehaviour {
 
     public void Update()
     {
-        print("Num of Sandwiches on plate: " + sandwiches.Count);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         print("Triggered");
-		if (other.CompareTag("Sandwich") && !other.GetComponent<Carriable>().IsBeingCarried()) {
+		if (other.CompareTag("Sandwich")) {
 			sandwiches.Add(other.gameObject);
             Destroy(other.gameObject.GetComponent<Carriable>());
 		}
