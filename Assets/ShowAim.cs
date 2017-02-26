@@ -11,10 +11,11 @@ public class ShowAim : MonoBehaviour {
 		aimer = transform.FindChild("aimer");
 	}
 
-	public void SetAim(float x, float y) {
-		float angle = Mathf.Rad2Deg * Mathf.Atan2(x, y);
-		aimer.rotation = Quaternion.Euler(0, 0, 180+angle);
-		float scale = new Vector2(x, y).magnitude;
+	public void SetAim(Vector2 direction, float currentPower, float maxPower) {
+		float angle = Mathf.Rad2Deg * Mathf.Atan2(direction.x, direction.y);
+		aimer.rotation = Quaternion.Euler(0, 0, -angle);
+        float proportionOfMax = currentPower / maxPower;
+        float scale = proportionOfMax * 3.0f;
 		aimer.localScale = new Vector3(scale, scale, 1);
 	}
 }

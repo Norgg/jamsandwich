@@ -20,13 +20,17 @@ public class MakeSandwich : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		if (collision.gameObject.CompareTag("Bread")) {
-			if (!collidedAlready) {
-				GameObject.Instantiate(sandwichFab, transform.position, Quaternion.identity);
-				GameObject.Destroy(gameObject);
-				GameObject.Destroy(collision.gameObject);
-				collision.gameObject.GetComponent<MakeSandwich>().SetCollided();
-			}
+		if (collision.gameObject.CompareTag("Bread") && !collidedAlready) {
+            var beingCarried = gameObject.GetComponent<Carriable>().IsBeingCarried();
+            var otherBeingCarried = collision.gameObject.GetComponent<Carriable>().IsBeingCarried();
+            if(!beingCarried && !otherBeingCarried)
+            {
+                var sanFab = GameObject.Instantiate(sandwichFab, transform.position, Quaternion.identity);
+                sanFab.GetComponent<Rigidbody2D>().angularVelocity = 200;
+                GameObject.Destroy(gameObject);
+                GameObject.Destroy(collision.gameObject);
+                collision.gameObject.GetComponent<MakeSandwich>().SetCollided();
+            }
 		}
 	}
 }

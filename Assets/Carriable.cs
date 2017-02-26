@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Carriable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private bool carried = false;
+    public bool IsBeingCarried()
+    {
+        return carried;
+    }
+
+    public void SetCarry(bool carryVal)
+    {
+        carried = carryVal;
+    }
 }
