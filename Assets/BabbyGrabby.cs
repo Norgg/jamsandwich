@@ -16,9 +16,11 @@ public class BabbyGrabby : MonoBehaviour {
 
 	bool grabPlayers = false;
 	public GameObject playerToGrab;
+	AudioSource crunchSound;
 
     public void Start()
     {
+		crunchSound = GetComponent<AudioSource>();
         originalPos = transform.position;
         plateVec = platingArea.gameObject.transform.position;
 		babyHunger = baby.GetComponent<Hunger>();
@@ -55,6 +57,7 @@ public class BabbyGrabby : MonoBehaviour {
 					Destroy(sandwich.gameObject);
 				}
 				platingArea.sandwiches.Clear();
+				crunchSound.PlayDelayed(1 / grabSpeed);
 
 				movingTowardsPlate = false;
 			}
