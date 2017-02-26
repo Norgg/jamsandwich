@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BabbyGrabby : MonoBehaviour {
     public PlatingArea platingArea;
@@ -32,6 +33,9 @@ public class BabbyGrabby : MonoBehaviour {
 			grabPlayerProgress += Time.deltaTime * grabSpeed;
 			var lerpedPos = Vector2.Lerp(originalPos, playerToGrab.transform.position, grabPlayerProgress);
 			transform.position = new Vector3(lerpedPos.x, lerpedPos.y, transform.position.z);
+			if (grabPlayerProgress >= 1) {
+				SceneManager.LoadScene("munch");
+			}
 		} else {
 			// Check for sandwiches
 			if (platingArea.sandwiches.Count > 0 && !movingTowardsPlate && towardsPlateMoveProgress <= 0.0) {
