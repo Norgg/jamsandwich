@@ -254,7 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71335fa9a9729d644a439f0b73b60940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSpeed: 0.004
+  startHungerSpeed: 0.001
+  hungerAccel: 0.00001
   hungerPerSandwich: 3
   hungerBar: {fileID: 455209226}
 --- !u!4 &359063064
@@ -929,7 +930,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4883457688187862, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.17
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4883457688187862, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1475,7 +1476,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4883457688187862, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.391
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 4883457688187862, guid: c7c197cc3bf2da247b527690a92d014c, type: 2}
       propertyPath: m_LocalPosition.y

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Hunger : MonoBehaviour {
 	float hunger = 0;
-	public float hungerSpeed = 0.001f;
+	public float startHungerSpeed = 0.002f;
+	public float hungerAccel = 0.00001f;
+	float hungerSpeed;
 	float maxHunger = 10;
 	public float hungerPerSandwich = 1f;
 	public GameObject hungerBar;
@@ -12,11 +14,14 @@ public class Hunger : MonoBehaviour {
 
 	void Start() {
 		cry = GetComponent<AudioSource>();
+		hungerSpeed = startHungerSpeed;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (hunger < maxHunger) {
+			hungerSpeed += hungerAccel * Time.fixedDeltaTime;
+			Debug.Log(hungerSpeed);
 			hunger += hungerSpeed;
 			Vector3 scale = hungerBar.transform.localScale;
 			scale.x = hunger;
