@@ -10,11 +10,14 @@ public class Hunger : MonoBehaviour {
 	float maxHunger = 10;
 	public float hungerPerSandwich = 1f;
 	public GameObject hungerBar;
+	public TextMesh scoreText;
+	int eaten;
 	AudioSource cry;
 
 	void Start() {
 		cry = GetComponent<AudioSource>();
 		hungerSpeed = startHungerSpeed;
+		eaten = 0;
 	}
 	
 	// Update is called once per frame
@@ -43,6 +46,8 @@ public class Hunger : MonoBehaviour {
 	}
 
 	public void Eat(int sandwiches) {
+		eaten += sandwiches;
+		scoreText.text = "" + eaten;
 		hunger -= sandwiches * hungerPerSandwich;
 		if (hunger < 0) {
 			hunger = 0;
