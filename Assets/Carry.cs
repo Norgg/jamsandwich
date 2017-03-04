@@ -44,11 +44,11 @@ public class Carry : MonoBehaviour {
 	    currentThrowPower = Mathf.Clamp(currentThrowPower + throwGrowthSpeed * Time.deltaTime, 0, maxThrowPower);
 	}
 
-	if (Input.GetAxis("Fire" + playerNum) > 0 && !beginFiring && !animateFiring) {
+	if (Input.GetAxis("Fire" + playerNum) < 0 && !beginFiring && !animateFiring) {
 	    beginFiring = true;
 	    currentThrowPower = initialThrowPower;
 	}
-	else if(Input.GetAxis("Fire" + playerNum) == 0 && beginFiring && !animateFiring)
+	else if(Input.GetAxis("Fire" + playerNum) >= 0 && beginFiring && !animateFiring)
 	{
             beginFiring = false;
             animateFiring = true;
