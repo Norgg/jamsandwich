@@ -21,7 +21,6 @@ public class Hunger : MonoBehaviour {
 			Vector3 scale = hungerBar.transform.localScale;
 			scale.x = hunger;
 			hungerBar.transform.localScale = scale;
-			Debug.Log(hunger);
 			if (hunger > maxHunger / 2) {
 				if (!cry.isPlaying) {
 					cry.Play();

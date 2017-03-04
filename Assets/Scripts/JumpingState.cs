@@ -25,7 +25,6 @@ public class JumpingState : CaterpillarState
 
         caterpillar.vy *= caterpillar.jumpArcFriction;
 
-        Debug.Log("Time left: " + jumpTimer);
         jumpTimer -= Time.fixedDeltaTime;
 
 		if (jumpTimer <= 0 || !Input.GetButton(axis))
