@@ -24,7 +24,6 @@ public class Hunger : MonoBehaviour {
 	void FixedUpdate () {
 		if (hunger < maxHunger) {
 			hungerSpeed += hungerAccel * Time.fixedDeltaTime;
-			Debug.Log(hungerSpeed);
 			hunger += hungerSpeed;
 			Vector3 scale = hungerBar.transform.localScale;
 			scale.x = hunger;

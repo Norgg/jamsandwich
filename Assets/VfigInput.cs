@@ -224,8 +224,8 @@ public class VfigInput : MonoBehaviour
         new Actuator( true,   0,  1, -1f,  1f, false, -1f, 1f, 0.15f ), // LeftStickY
         new Actuator( true,   0,  3, -1f,  1f, false, -1f, 1f, 0.15f ), // RightStickX
         new Actuator( true,   0,  4, -1f,  1f, false, -1f, 1f, 0.15f ), // RightStickY
-        new Actuator( true,   0,  8,  0f,  1f, false,  0f, 1f,    0f ), // LeftTrigger
-        new Actuator( true,   0,  9,  0f,  1f, false,  0f, 1f,    0f ), // RightTrigger
+        new Actuator( true,   0,  2,  0f,  1f, false,  0f, 1f,    0f ), // LeftTrigger
+        new Actuator( true,   0,  2,  0f, -1f, false,  0f, 1f,    0f ), // RightTrigger
 #elif UNITY_STANDALONE_LINUX || UNITY_EDITOR_LINUX
         new Actuator( true,   0,  0, -1f,  1f, false, -1f, 1f, 0.15f ), // LeftStickX
         new Actuator( true,   0,  1,  1f, -1f, false, -1f, 1f, 0.15f ), // LeftStickY
