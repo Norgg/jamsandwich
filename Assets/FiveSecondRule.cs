@@ -19,11 +19,17 @@ public class FiveSecondRule : MonoBehaviour {
 		|| (collision.gameObject.CompareTag("Plate") && !gameObject.CompareTag("Sandwich"))) {
 			var breadController = GetComponent<I_Am_Bread>();
 			if (breadController == null) {
-				Destroy(gameObject);
+				var sandwichController = GetComponent<I_Will_Be_Bread>();
+				if (sandwichController == null) {
+					GameObject.Destroy(this);
+				} else {
+					sandwichController.BeBreads();
+				}
 			} else {
 				var bread3D = breadController.BeAllYouCanBe();
 				bread3D.GetComponent<BreadInTheThirdDimension>().GroundImpulse();
 			}
+
 		}
 	}
 }

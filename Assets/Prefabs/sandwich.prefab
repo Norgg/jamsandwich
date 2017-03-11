@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4916874102694480}
   - component: {fileID: 33487889622688502}
   - component: {fileID: 23226322276581248}
+  - component: {fileID: 64638497252546104}
   m_Layer: 8
   m_Name: slice1
   m_TagString: Untagged
@@ -38,6 +39,7 @@ GameObject:
   - component: {fileID: 4124549944949016}
   - component: {fileID: 33642793177802976}
   - component: {fileID: 23696429944002274}
+  - component: {fileID: 64029915371660232}
   m_Layer: 8
   m_Name: slice2
   m_TagString: Untagged
@@ -58,6 +60,7 @@ GameObject:
   - component: {fileID: 114129523307497914}
   - component: {fileID: 114081459233476260}
   - component: {fileID: 82283473386578952}
+  - component: {fileID: 114337166409498756}
   m_Layer: 8
   m_Name: sandwich
   m_TagString: Sandwich
@@ -73,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 1960278335345404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.57, y: 1.21, z: 0.010624953}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4916874102694480}
   - {fileID: 4124549944949016}
@@ -216,6 +219,34 @@ BoxCollider2D:
   m_Offset: {x: -0.06, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.84, y: 1.33}
+--- !u!64 &64029915371660232
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086757267756434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 90866a1122d614d31a5f2e10c4aaea68, type: 3}
+--- !u!64 &64638497252546104
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044558302173442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 90866a1122d614d31a5f2e10c4aaea68, type: 3}
 --- !u!82 &82283473386578952
 AudioSource:
   m_ObjectHideFlags: 1
@@ -318,3 +349,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b022c7310abe85438490f88a4d3b2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114337166409498756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960278335345404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc084e33a24bfc84197d948c58c2ad50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breadPrefab: {fileID: 1963895890802806, guid: 5b5855b7aa63a0e41bed8641c4c38c0b,
+    type: 2}

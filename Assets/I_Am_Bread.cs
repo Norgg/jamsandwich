@@ -6,15 +6,19 @@ public class I_Am_Bread : MonoBehaviour {
     public GameObject bread3DPrefab;
 
     void Start () {
-        var googlies = GetComponentsInChildren<Googly>();
-        // One in 100 chance of eyes
-        if (Random.Range(0.0f, 1.0f) >= 0.01f) {
-            for (int i = 0; i < googlies.Length; ++i) {
-                var go = googlies[i].gameObject;
-                Destroy(go);
-            }
-        }
+		RemoveEyes();
     }
+
+	public void RemoveEyes() {
+		// One in 100 chance of eyes
+		var googlies = GetComponentsInChildren<Googly>();
+		if (Random.Range(0.0f, 1.0f) >= 0.01f) {
+			for (int i = 0; i < googlies.Length; ++i) {
+				var go = googlies[i].gameObject;
+				Destroy(go);
+			}
+		}
+	}
 
     public GameObject BeAllYouCanBe() {
         // Grow into the third dimension!
