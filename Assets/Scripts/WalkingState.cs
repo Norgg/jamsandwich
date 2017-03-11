@@ -18,8 +18,7 @@ public class WalkingState : CaterpillarState
     
     public void FixedUpdate()
     {
-		String axis = "Horizontal" + caterpillar.playerNum;
-        caterpillar.ax = caterpillar.speed * Input.GetAxisRaw(axis);
+        caterpillar.ax = caterpillar.speed * VfigInput.GetAxis(caterpillar.playerNum - 1, VfigInput.Axis.LeftStickX);
         caterpillar.vx += caterpillar.ax * Time.deltaTime;
         caterpillar.vx *= caterpillar.friction;
 

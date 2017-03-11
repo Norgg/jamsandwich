@@ -48,7 +48,7 @@ public class PlayerMovement: MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump" + playerNum))
+        if (VfigInput.GetButtonDown(playerNum - 1, VfigInput.Button.A))
         {
             jumpPressed = true;
         }

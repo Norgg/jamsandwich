@@ -31,7 +31,7 @@ public class Carry : MonoBehaviour {
 
     private void Update()
     {
-	var newAimDir = new Vector2(Input.GetAxis("AimX" + playerNum), Input.GetAxis("AimY" + playerNum));
+	var newAimDir = new Vector2(VfigInput.GetAxis(playerNum - 1, VfigInput.Axis.RightStickX), -VfigInput.GetAxis(playerNum - 1, VfigInput.Axis.RightStickY));
 	if(newAimDir.magnitude > 0)
 	{
 	    currentAimDir = Vector2.Lerp(currentAimDir, newAimDir.normalized, 0.25f);
@@ -44,11 +44,12 @@ public class Carry : MonoBehaviour {
 	    currentThrowPower = Mathf.Clamp(currentThrowPower + throwGrowthSpeed * Time.deltaTime, 0, maxThrowPower);
 	}
 
-	if (Input.GetAxis("Fire" + playerNum) < 0 && !beginFiring && !animateFiring) {
+    float fireAxis = VfigInput.GetAxis(playerNum - 1, VfigInput.Axis.RightTrigger);
+	if (fireAxis > 0 && !beginFiring && !animateFiring) {
 	    beginFiring = true;
 	    currentThrowPower = initialThrowPower;
 	}
-	else if(Input.GetAxis("Fire" + playerNum) >= 0 && beginFiring && !animateFiring)
+	else if(fireAxis == 0 && beginFiring && !animateFiring)
 	{
             beginFiring = false;
             animateFiring = true;
